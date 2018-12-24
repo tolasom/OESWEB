@@ -1,0 +1,17 @@
+dist: trusty
+sudo: required
+
+addons:
+  sonarcloud:
+    organization: "tolasom-github"
+    token:
+      secure: "h6n/4fHhBX6h8mSQAHPnCv874RBezZA/Sgj2Bbbi7NnhRBHH5KkAiysEiA7uscxQJaGjp0rWQ7My53Q5uDAGy8n/Js//MOFcnjc7c6zi/bkGx1ZYdIfALzcM32lUFs22sINvq3wjo/NbCYa1dejJOv+0aUFtnX9a+mPIoLtI3GSGvbYzfbRlSAH4EX/mXyYBkk1/aEqogE/xXSf+mgaivfA/eL3iddDzfSu4exo/xNm/1KgtbDcqLB1lmVW1MPRM5jEY+iJpYtteiOe2+1xqF0+sPFqmA2B2a35qzjh+ck9iN7dT2EFmRcIssgSmzMQ1GjSEG5M6aOOxCizIOGY82WDp2oljW4kefHgFNBZn/WvDpAbkCYm8aN6p5MqU7ZBi0ziKvKI4lUNRIc8dRnTtNlnVC30Fyrgtm/dhX7yT92AsUhP/Q7v0XpPM8AqrNYPQiEGYJ2M6Mo8zzjA+auN517GX6YlBVajVajQZdQylMNryA9yBRQhTgkDhR/CzZuzpxdR44pBpdDGxHPc+aMtyLjUaWtmDFV8Xe4OWFPAW3TeM/lzvOBSMHokgONx0pfXiYHOkpd83d5zKHSvmbSfKs140zZJx42THvllBoU5tI27DgZDh0U62t1Om/U/OtsivOvl0+3IDjEUGkx7PBJCWHkNtL6yWJZGXrATBOufnxcc="
+jdk:
+  - oraclejdk8
+script:
+  - sonar-scanner
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
+notification:
+  email: false 
